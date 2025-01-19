@@ -1,0 +1,47 @@
+{
+  "name": "hipermeganet",
+  "version": "1.0.0",
+  "description": "Gestor de Canales de YouTube",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "dist": "electron-builder"
+  },
+  "author": "Majaus",
+  "license": "MIT",
+  "build": {
+    "appId": "com.majaus.hipermeganet",
+    "productName": "Hipermeganet",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "files": [
+      "*.js",
+      "*.html",
+      "*.css",
+      "libs/**/*"
+    ],
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "google-auth-library": "^9.4.1",
+    "googleapis": "^129.0.0",
+    "html2canvas": "^1.4.1",
+    "sqlite3": "^5.1.7"
+  }
+}

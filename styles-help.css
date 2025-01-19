@@ -1,0 +1,128 @@
+#help {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.help-container {
+    width: 90%;
+    height: 90%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.help-container .title-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #000000;
+    color: white;
+    position: relative;
+}
+
+.help-container .title-bar h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.help-container .close-button {
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    position: absolute;
+    right: 20px;
+}
+
+.help-container .close-button:hover {
+    color: #ff4d4d;
+}
+
+.help-content {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.help-navigation {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+.help-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.help-navigation li {
+    margin-bottom: 10px;
+}
+
+.help-navigation a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.help-navigation a:hover {
+    background-color: #f0f0f0;
+}
+
+.help-sections {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.help-sections section {
+    margin-bottom: 40px;
+}
+
+.help-sections h3 {
+    color: #333;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.help-sections h4 {
+    color: #666;
+    margin: 20px 0 10px;
+}
+
+.help-sections ul, .help-sections ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.help-sections li {
+    margin-bottom: 8px;
+}
+
+.help-sections code {
+    background-color: #f8f8f8;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+body.help-active {
+    overflow: hidden;
+}

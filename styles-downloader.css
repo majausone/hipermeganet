@@ -1,0 +1,239 @@
+#downloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.downloader-container {
+    width: 90%;
+    height: 90%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.downloader-container .title-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #000000;
+    color: white;
+    position: relative;
+}
+
+.downloader-container .title-bar h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.downloader-container .close-button {
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    position: absolute;
+    right: 20px;
+}
+
+.downloader-container .close-button:hover {
+    color: #ff4d4d;
+}
+
+.content {
+    display: flex;
+    flex-grow: 1;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.left-column {
+    width: 250px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.json-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.custom-file-upload:hover {
+    background-color: #e8e8e8;
+}
+
+#jsonFileInput {
+    display: none;
+}
+
+#loadJsonBtn,
+#downloadAllBtn,
+#cancelAllBtn {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#loadJsonBtn:hover,
+#downloadAllBtn:hover {
+    background-color: #45a049;
+}
+
+#cancelAllBtn {
+    background-color: #f44336;
+}
+
+#cancelAllBtn:hover {
+    background-color: #d32f2f;
+}
+
+.json-file-name {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 4px;
+    word-break: break-all;
+}
+
+.video-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.video-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.video-item:hover {
+    background-color: #f0f0f0;
+}
+
+.video-item .video-name {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.progress-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-weight: bold;
+}
+
+body.downloader-active {
+    overflow: hidden;
+}
+
+.instructions {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.instructions h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.instructions h4 {
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.instructions pre {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    overflow-x: auto;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .downloader-container {
+        width: 95%;
+        height: 95%;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .left-column {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

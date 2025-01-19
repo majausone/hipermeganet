@@ -1,0 +1,75 @@
+<div class="miniaturizator-container">
+    <div class="title-bar">
+        <h2>Miniaturizator</h2>
+        <span class="close-button" id="closeMiniaturizatorBtn">✖</span>
+    </div>
+    <div class="content">
+        <div class="left-column">
+            <button id="selectThumbnailBtn">Select Thumbnail</button>
+            <input type="text" id="thumbnailPath" placeholder="Thumbnail path">
+            <input type="text" id="thumbnailText" placeholder="Thumbnail text">
+            <div class="text-controls">
+                <div class="control-group">
+                    <label>
+                        Font Family:
+                        <select id="fontFamily">
+                            <option value="Arial">Arial</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="control-group">
+                    <label>
+                        Font Size:
+                        <input type="range" id="fontSize" min="50" max="500" value="24">
+                    </label>
+                </div>
+                <div class="control-group">
+                    <label>
+                        Text Color:
+                        <input type="color" id="textColor" value="#ffffff">
+                    </label>
+                </div>
+                <div class="control-group">
+                    <label class="inline-label">
+                        <span>Text Outline</span>
+                        <input type="checkbox" id="textOutline">
+                        <input type="color" id="outlineColor" value="#000000">
+                    </label>
+                </div>
+                <div class="control-group">
+                    <label class="inline-label">
+                        <span>Text Background</span>
+                        <input type="checkbox" id="textBackground">
+                        <input type="color" id="backgroundColor" value="#000000">
+                    </label>
+                    <input type="range" id="backgroundSize" min="0" max="100" value="50">
+                </div>
+                <div class="control-group">
+                    <label class="inline-label">
+                        <span>Div Background</span>
+                        <input type="checkbox" id="generalBackground">
+                        <input type="color" id="generalBackgroundColor" value="#000000">
+                    </label>
+                </div>
+            </div>
+            <button id="saveButton">Save Image</button>
+            <button id="seeAllButton">See All</button>
+            <button id="saveAllButton">Save All</button>
+            <button id="openFolder">Open Folder</button>
+        </div>
+        <div class="main-content">
+            <div class="thumbnail-preview large">
+                <div id="thumbnailContainer">
+                    <img id="thumbnailPreviewLarge" src="" alt="Large thumbnail preview" class="thumbnail-large">
+                    <div id="thumbnailTextLarge" class="thumbnail-text">
+                        <div class="text-background"></div>
+                        <div class="resize-handle top-left"></div>
+                        <div class="resize-handle top-right"></div>
+                        <div class="resize-handle bottom-left"></div>
+                        <div class="resize-handle bottom-right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

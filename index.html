@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://img.youtube.com https://i.ytimg.com https://i9.ytimg.com; connect-src 'self' https://resource2.heygen.ai">
+    <title>Hipermeganet - YouTube Channel Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-miniaturizator.css">
+    <link rel="stylesheet" href="styles-downloader.css">
+    <link rel="stylesheet" href="styles-help.css">
+</head>
+<body>
+    <div id="tabs">
+        <button class="tab-button" data-tab="accounts">Accounts</button>
+        <button class="tab-button" data-tab="channels">Channels</button>
+        <button class="tab-button" data-tab="videos">Videos</button>
+        <button class="tab-button" data-tab="video-details">Video Details</button>
+        <button class="tab-button" data-tab="video-details-2">Video Details 2</button>
+        <button class="tab-button" data-tab="languages">Languages</button>
+        <button class="tab-button" data-tab="config">Configuration</button>
+        <button id="openDownloaderBtn">Json Downloader</button>
+        <button id="openHelpBtn" style="background-color: black;">Help</button>
+    </div>
+    <div id="content"></div>
+
+    <script type="module" src="dataLoaders.js"></script>
+    <script src="popupManager.js"></script>
+    <script src="tabManager.js"></script>
+    <script src="editManager.js"></script>
+    <script src="googleFonts.js"></script>
+    <script src="libs/html2canvas.min.js"></script>
+    <script src="libs/axios.js"></script>
+    <script src="miniaturizator.js"></script>
+    <script src="miniaturizatorText.js"></script>
+    <script src="download.js"></script>
+    <script src="help.js"></script>
+    <script src="init.js"></script>
+</body>
+</html>

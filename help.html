@@ -1,0 +1,137 @@
+<div class="help-container">
+    <div class="title-bar">
+        <h2>Application Help</h2>
+        <span class="close-button" id="closeHelpBtn">✖</span>
+    </div>
+    <div class="help-content">
+        <div class="help-navigation">
+            <ul>
+                <li><a href="#auto-assign">Auto Assign Files</a></li>
+                <li><a href="#upload-process">Upload Process</a></li>
+                <li><a href="#bulk-operations">Bulk Operations</a></li>
+                <li><a href="#filters-sorting">Filters & Sorting</a></li>
+                <li><a href="#api-keys">API Keys & Quotas</a></li>
+                <li><a href="#data-management">Data Management</a></li>
+                <li><a href="#translations">Translations</a></li>
+                <li><a href="#channels">Channel Management</a></li>
+            </ul>
+        </div>
+        <div class="help-sections">
+            <section id="auto-assign">
+                <h3>Auto Assign Files</h3>
+                <p>The auto-assign feature helps organize and link video files with their database entries automatically.</p>
+                <h4>File Naming Convention</h4>
+                <ul>
+                    <li>Videos should be named as: <code>LocalID-ChannelName.mp4</code></li>
+                    <li>Thumbnails should match: <code>LocalID-ChannelName.jpg/png</code></li>
+                </ul>
+                <h4>Process</h4>
+                <ol>
+                    <li>Scans the global video path directory</li>
+                    <li>Matches files based on LocalID and Channel name</li>
+                    <li>Creates new video entries if none exist</li>
+                    <li>Updates paths for existing entries</li>
+                </ol>
+            </section>
+
+            <section id="upload-process">
+                <h3>Upload Process</h3>
+                <h4>New Video Upload</h4>
+                <ul>
+                    <li>Checks if YouTube ID exists</li>
+                    <li>If no ID exists, creates new video on YouTube</li>
+                    <li>Updates local database with new YouTube ID</li>
+                </ul>
+                <h4>Video Update</h4>
+                <ul>
+                    <li>If YouTube ID exists, performs metadata update</li>
+                    <li>Optional thumbnail update</li>
+                    <li>Preserves existing YouTube statistics</li>
+                </ul>
+            </section>
+
+            <section id="bulk-operations">
+                <h3>Bulk Operations</h3>
+                <p>Bulk operations allow managing multiple videos simultaneously:</p>
+                <ul>
+                    <li>Upload multiple videos</li>
+                    <li>Update visibility settings</li>
+                    <li>Set language preferences</li>
+                    <li>Manage categories</li>
+                    <li>Apply kids content settings</li>
+                </ul>
+            </section>
+
+            <section id="filters-sorting">
+                <h3>Filters & Sorting</h3>
+                <p>The application maintains filter and sort preferences:</p>
+                <ul>
+                    <li>Filters persist between tab changes</li>
+                    <li>Column sorting order is saved</li>
+                    <li>Channel selections are remembered</li>
+                    <li>Use "Delete Local Data" to reset preferences</li>
+                </ul>
+            </section>
+
+            <section id="api-keys">
+                <h3>API Keys & Quotas</h3>
+                <h4>YouTube API</h4>
+                <ul>
+                    <li>Quota limits apply to YouTube operations</li>
+                    <li>Quota increases available through Google Cloud Console</li>
+                    <li>Not available for purchase - must request increase</li>
+                </ul>
+                <h4>GPT API</h4>
+                <ul>
+                    <li>Pay-per-use model</li>
+                    <li>Approximately $0.10 for 18 channel translations</li>
+                    <li>No quota limitations</li>
+                </ul>
+            </section>
+
+            <section id="data-management">
+                <h3>Data Management</h3>
+                <h4>Local Database</h4>
+                <ul>
+                    <li>Stores video metadata</li>
+                    <li>Maintains channel information</li>
+                    <li>Contains API keys (unencrypted)</li>
+                </ul>
+                <h4>Deletion Process</h4>
+                <p>When deleting videos:</p>
+                <ul>
+                    <li>Only removes local database entry</li>
+                    <li>Does not affect YouTube content</li>
+                    <li>Maintains file system content</li>
+                </ul>
+            </section>
+
+            <section id="translations">
+                <h3>Translations</h3>
+                <p>The translation system uses GPT-4 to translate:</p>
+                <ul>
+                    <li>Video titles</li>
+                    <li>Descriptions</li>
+                    <li>Tags</li>
+                    <li>Thumbnail text</li>
+                </ul>
+            </section>
+
+            <section id="channels">
+                <h3>Channel Management</h3>
+                <h4>Channel Creation</h4>
+                <ul>
+                    <li>Manual language assignment required</li>
+                    <li>Auto-assigns settings to new videos</li>
+                    <li>Inherits account settings</li>
+                </ul>
+                <h4>Synchronization</h4>
+                <ul>
+                    <li>Updates metadata from YouTube</li>
+                    <li>Preserves local settings</li>
+                    <li>Maintains video associations</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
