@@ -140,8 +140,8 @@ const deleteVideos = async (tableId) => {
         return;
     }
 
-    const confirmDelete = await window.showConfirmPopup('Are you sure you want to delete the selected videos?', 'This action cannot be undone');
-    if (confirmDelete) {
+    const result = await window.showConfirmPopup('Are you sure you want to delete the selected videos?', 'This action cannot be undone');
+    if (result.confirmed === true) {
         for (const videoId of selectedVideos) {
             await window.electronAPI.databaseRemove('videos', videoId);
         }
